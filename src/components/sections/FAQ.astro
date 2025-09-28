@@ -13,7 +13,15 @@ const currentLocale = getLocaleFromPathname(currentPath || Astro.url.pathname);
 const t = translations[currentLocale] || translations.ja;
 
 // 翻訳関数
-const translate = (key: string) => getTranslation(t, key);
+const translate = (key: string) => {
+  const result = getTranslation(t, key);
+  // 翻訳キーがそのまま返された場合は、フォールバック値を返す
+  if (result === key) {
+    console.warn(`Translation key not found: ${key}`);
+    return key;
+  }
+  return result;
+};
 
 // FAQ構造化データを生成
 const faqStructuredData = {
@@ -312,6 +320,155 @@ const faqStructuredData = {
             <p class="text-sm text-gray-600 mt-4">
               {translate('faq.questions.multilingual.support')}
             </p>
+          </div>
+        </div>
+
+        <!-- Q7: 成果保証システムについて -->
+        <div class="bg-gradient-to-r from-blue-50 to-green-50 rounded-lg overflow-hidden border-2 border-blue-200">
+          <button class="w-full px-6 py-4 text-left bg-gradient-to-r from-blue-100 to-green-100 hover:from-blue-200 hover:to-green-200 transition-colors duration-300 flex items-center justify-between" onclick="toggleFAQ('faq7')">
+            <h3 class="text-lg font-semibold text-gray-900">
+              {translate('faq.questions.guarantee_system.question')}
+            </h3>
+            <svg class="w-5 h-5 text-blue-600 transition-transform duration-300" id="faq7-icon" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+          <div class="hidden px-6 py-4" id="faq7-content">
+            <p class="text-gray-700 mb-6">
+              {translate('faq.questions.guarantee_system.answer')}
+            </p>
+            
+            <!-- 技術保証 -->
+            <div class="bg-white rounded-lg p-4 mb-4 border-l-4 border-blue-500">
+              <h4 class="font-semibold text-blue-800 mb-3">{translate('faq.questions.guarantee_system.technical_guarantee.title')}</h4>
+              <ul class="space-y-2 text-sm text-gray-600 mb-3">
+                {translate('faq.questions.guarantee_system.technical_guarantee.features').map((feature: string) => (
+                  <li class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                    </svg>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+              <p class="text-sm text-red-600 font-semibold">
+                {translate('faq.questions.guarantee_system.technical_guarantee.refund')}
+              </p>
+            </div>
+
+            <!-- ビジネス保証 -->
+            <div class="bg-white rounded-lg p-4 mb-4 border-l-4 border-green-500">
+              <h4 class="font-semibold text-green-800 mb-3">{translate('faq.questions.guarantee_system.business_guarantee.title')}</h4>
+              <ul class="space-y-2 text-sm text-gray-600 mb-3">
+                {translate('faq.questions.guarantee_system.business_guarantee.features').map((feature: string) => (
+                  <li class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                    </svg>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+              <p class="text-sm text-orange-600 font-semibold">
+                {translate('faq.questions.guarantee_system.business_guarantee.refund')}
+              </p>
+            </div>
+
+            <!-- 6ヶ月後の選択肢 -->
+            <div class="bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg p-4">
+              <h4 class="font-semibold text-purple-800 mb-3">{translate('faq.questions.guarantee_system.options.title')}</h4>
+              <ul class="space-y-1 text-sm text-gray-600">
+                {translate('faq.questions.guarantee_system.options.options').map((option: string) => (
+                  <li class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-purple-500" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                    </svg>
+                    {option}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q8: 返金プロセスについて -->
+        <div class="bg-gray-50 rounded-lg overflow-hidden">
+          <button class="w-full px-6 py-4 text-left bg-gray-100 hover:bg-gray-200 transition-colors duration-300 flex items-center justify-between" onclick="toggleFAQ('faq8')">
+            <h3 class="text-lg font-semibold text-gray-900">
+              {translate('faq.questions.refund_process.question')}
+            </h3>
+            <svg class="w-5 h-5 text-gray-500 transition-transform duration-300" id="faq8-icon" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+          <div class="hidden px-6 py-4" id="faq8-content">
+            <p class="text-gray-700 mb-4">
+              {translate('faq.questions.refund_process.answer')}
+            </p>
+            <ul class="space-y-2 text-sm text-gray-600">
+              {translate('faq.questions.refund_process.process').map((process: string) => (
+                <li class="flex items-center gap-2">
+                  <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                  {process}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        <!-- Q9: なぜ成果保証ができるのか -->
+        <div class="bg-gray-50 rounded-lg overflow-hidden">
+          <button class="w-full px-6 py-4 text-left bg-gray-100 hover:bg-gray-200 transition-colors duration-300 flex items-center justify-between" onclick="toggleFAQ('faq9')">
+            <h3 class="text-lg font-semibold text-gray-900">
+              {translate('faq.questions.guarantee_why.question')}
+            </h3>
+            <svg class="w-5 h-5 text-gray-500 transition-transform duration-300" id="faq9-icon" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+          <div class="hidden px-6 py-4" id="faq9-content">
+            <p class="text-gray-700 mb-4">
+              {translate('faq.questions.guarantee_why.answer')}
+            </p>
+            <ul class="space-y-2 text-sm text-gray-600">
+              {translate('faq.questions.guarantee_why.reasons').map((reason: string) => (
+                <li class="flex items-center gap-2">
+                  <svg class="w-4 h-4 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                  {reason}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        <!-- Q10: 6ヶ月後の選択肢 -->
+        <div class="bg-gray-50 rounded-lg overflow-hidden">
+          <button class="w-full px-6 py-4 text-left bg-gray-100 hover:bg-gray-200 transition-colors duration-300 flex items-center justify-between" onclick="toggleFAQ('faq10')">
+            <h3 class="text-lg font-semibold text-gray-900">
+              {translate('faq.questions.contract_term.question')}
+            </h3>
+            <svg class="w-5 h-5 text-gray-500 transition-transform duration-300" id="faq10-icon" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+          <div class="hidden px-6 py-4" id="faq10-content">
+            <p class="text-gray-700 mb-4">
+              {translate('faq.questions.contract_term.answer')}
+            </p>
+            <ul class="space-y-2 text-sm text-gray-600">
+              {translate('faq.questions.contract_term.benefits').map((benefit: string) => (
+                <li class="flex items-center gap-2">
+                  <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                  {benefit}
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>

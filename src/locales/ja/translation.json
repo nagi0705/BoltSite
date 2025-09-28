@@ -12,11 +12,11 @@
   },
   "hero": {
     "title": "BoltSite",
-    "subtitle": "中小企業のDXを加速します",
-    "description": "PageSpeed 95点保証の爆速サイトを1ヶ月以内に提供。初期費用0円で始められます。",
+    "subtitle": "成果が出なければ返金。WordPressから乗り換える、最も安全な選択",
+    "description": "6ヶ月成果保証で、技術面とビジネス面の両方で成果を保証。未達成なら最大50%返金。",
     "cta_primary": "無料相談申し込み",
-    "cta_secondary": "サービス詳細を見る",
-    "guarantee": "PageSpeed 95点保証"
+    "cta_secondary": "成果保証の詳細を見る",
+    "guarantee": "6ヶ月成果保証"
   },
   "services": {
     "title": "BoltSite",
@@ -175,9 +175,9 @@
     "contact": "お問い合わせ",
     "guarantees": {
       "initial_cost": "初期費用0円",
-      "delivery": "1ヶ月以内提供",
-      "pagespeed": "PageSpeed 95点保証",
-      "refund": "全額返金保証"
+      "delivery": "6ヶ月成果保証",
+      "pagespeed": "未達成なら最大50%返金",
+      "refund": "6ヶ月評価期間制"
     }
   },
   "faq": {
@@ -221,6 +221,67 @@
           "チャットサポート：平日9-21時",
           "電話サポート：平日10-17時",
           "緊急対応：24時間以内"
+        ]
+      },
+      "guarantee_system": {
+        "question": "成果保証システムについて詳しく教えてください",
+        "answer": "6ヶ月の成果保証システムで、技術面とビジネス面の両方で成果を保証します。",
+        "technical_guarantee": {
+          "title": "第1段階：技術保証（3ヶ月）",
+          "features": [
+            "モバイル：PageSpeed Insights 85点以上",
+            "デスクトップ：PageSpeed Insights 93点以上",
+            "Core Web Vitals全指標で「良好」評価"
+          ],
+          "refund": "未達成時：3ヶ月分の月額料金50%返金 + 追加1ヶ月の無料改善サポート"
+        },
+        "business_guarantee": {
+          "title": "第2段階：ビジネス成果保証（6ヶ月）",
+          "features": [
+            "サイト滞在時間15%向上",
+            "直帰率10%改善",
+            "お問い合わせ数20%増加",
+            "ページビュー15%増加"
+          ],
+          "refund": "未達成時：4-6ヶ月目の月額料金30%返金 + 改善提案レポート（5万円相当）無料提供"
+        },
+        "options": {
+          "title": "6ヶ月後の3つの選択肢",
+          "options": [
+            "年契約（10%OFF）",
+            "月契約継続",
+            "解約"
+          ]
+        }
+      },
+      "refund_process": {
+        "question": "本当に返金されるのですか？",
+        "answer": "はい。第三者ツール（Google Analytics等）のデータに基づき、公正に判定します。",
+        "process": [
+          "契約時にベースライン記録",
+          "月次で進捗共有",
+          "Google公式ツールのみ使用",
+          "公正な判定基準で返金実施"
+        ]
+      },
+      "guarantee_why": {
+        "question": "なぜ成果保証ができるのですか？",
+        "answer": "Astro.jsとCDNの組み合わせで、技術的に高速化が確実だからです。",
+        "reasons": [
+          "実績：平均92点達成",
+          "Jamstack技術の確実性",
+          "CDNによる高速配信",
+          "最適化されたコード生成"
+        ]
+      },
+      "contract_term": {
+        "question": "6ヶ月後はどうなりますか？",
+        "answer": "年契約（10%OFF）、月契約継続、解約の3つから自由に選択できます。",
+        "benefits": [
+          "1年縛りなし",
+          "成果に応じた柔軟な選択",
+          "リスクの大幅削減",
+          "透明性の高い契約条件"
         ]
       }
     }

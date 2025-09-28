@@ -21,8 +21,22 @@ const dropdownId = `language-dropdown-${uniqueId}`;
 ---
 
 <div class="relative group">
+  <style>
+    @media (min-width: 1024px) {
+      .language-switcher {
+        width: 140px;
+        min-width: 140px;
+        max-width: 140px;
+      }
+      .language-button {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+      }
+    }
+  </style>
   <button 
-    class="flex items-center justify-center gap-2 px-3 py-2 w-full lg:w-auto border border-blue-200 rounded-lg bg-white hover:bg-gray-50 transition-colors duration-200 text-sm font-medium text-gray-700"
+    class="language-button flex items-center justify-center gap-2 px-3 py-2 w-full lg:w-32 border border-blue-200 rounded-lg bg-white hover:bg-gray-50 transition-colors duration-200 text-sm font-medium text-gray-700"
     id={switcherId}
     aria-expanded="false"
     aria-haspopup="true"
@@ -35,7 +49,7 @@ const dropdownId = `language-dropdown-${uniqueId}`;
   </button>
   
   <div 
-    class="absolute top-full left-0 mt-1 w-full lg:w-48 bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 invisible transition-all duration-200 z-50"
+    class="absolute top-full left-0 mt-1 w-full lg:w-32 bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 invisible transition-all duration-200 z-50"
     id={dropdownId}
   >
     {languages.map((language) => {

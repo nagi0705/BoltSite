@@ -34,6 +34,10 @@ export const translations = {
     pricing: {
       title: "BoltSite料金プラン",
       subtitle: "BoltSiteのシンプルで透明性の高い料金体系",
+      guarantee: {
+        title: "6ヶ月成果保証",
+        subtitle: "未達成なら最大50%返金"
+      },
       basic: {
         name: "ベーシック",
         price: "¥50,000",
@@ -242,6 +246,67 @@ export const translations = {
           },
           support: "グローバルビジネス展開をサポートいたします。",
         },
+        guarantee_system: {
+          question: "成果保証システムについて詳しく教えてください",
+          answer: "6ヶ月の成果保証システムで、技術面とビジネス面の両方で成果を保証します。",
+          technical_guarantee: {
+            title: "第1段階：技術保証（3ヶ月）",
+            features: [
+              "モバイル：PageSpeed Insights 85点以上",
+              "デスクトップ：PageSpeed Insights 93点以上",
+              "Core Web Vitals全指標で「良好」評価"
+            ],
+            refund: "未達成時：3ヶ月分の月額料金50%返金 + 追加1ヶ月の無料改善サポート"
+          },
+          business_guarantee: {
+            title: "第2段階：ビジネス成果保証（6ヶ月）",
+            features: [
+              "サイト滞在時間15%向上",
+              "直帰率10%改善",
+              "お問い合わせ数20%増加",
+              "ページビュー15%増加"
+            ],
+            refund: "未達成時：4-6ヶ月目の月額料金30%返金 + 改善提案レポート（5万円相当）無料提供"
+          },
+          options: {
+            title: "6ヶ月後の3つの選択肢",
+            options: [
+              "年契約（10%OFF）",
+              "月契約継続",
+              "解約"
+            ]
+          }
+        },
+        refund_process: {
+          question: "本当に返金されるのですか？",
+          answer: "はい。第三者ツール（Google Analytics等）のデータに基づき、公正に判定します。",
+          process: [
+            "契約時にベースライン記録",
+            "月次で進捗共有",
+            "Google公式ツールのみ使用",
+            "公正な判定基準で返金実施"
+          ]
+        },
+        guarantee_why: {
+          question: "なぜ成果保証ができるのですか？",
+          answer: "Astro.jsとCDNの組み合わせで、技術的に高速化が確実だからです。",
+          reasons: [
+            "実績：平均92点達成",
+            "Jamstack技術の確実性",
+            "CDNによる高速配信",
+            "最適化されたコード生成"
+          ]
+        },
+        contract_term: {
+          question: "6ヶ月後はどうなりますか？",
+          answer: "年契約（10%OFF）、月契約継続、解約の3つから自由に選択できます。",
+          benefits: [
+            "1年縛りなし",
+            "成果に応じた柔軟な選択",
+            "リスクの大幅削減",
+            "透明性の高い契約条件"
+          ]
+        },
       },
       other_questions: {
         title: "その他のご質問はありませんか？",
@@ -291,6 +356,10 @@ export const translations = {
     pricing: {
       title: "Pricing Plans",
       subtitle: "Simple and transparent pricing structure",
+      guarantee: {
+        title: "6-Month Performance Guarantee",
+        subtitle: "Up to 50% refund if targets not met"
+      },
       basic: {
         name: "Basic",
         price: "¥500",
@@ -502,6 +571,67 @@ export const translations = {
           },
           support: "We support global business expansion.",
         },
+        guarantee_system: {
+          question: "Tell me more about the performance guarantee system",
+          answer: "We guarantee results in both technical and business aspects through a 6-month performance guarantee system.",
+          technical_guarantee: {
+            title: "Phase 1: Technical Guarantee (3 months)",
+            features: [
+              "Mobile: PageSpeed Insights 85+ points",
+              "Desktop: PageSpeed Insights 93+ points",
+              "Core Web Vitals all metrics 'Good' rating"
+            ],
+            refund: "If not achieved: 50% refund of 3 months' fees + 1 additional month of free improvement support"
+          },
+          business_guarantee: {
+            title: "Phase 2: Business Performance Guarantee (6 months)",
+            features: [
+              "15% increase in site stay time",
+              "10% improvement in bounce rate",
+              "20% increase in inquiries",
+              "15% increase in page views"
+            ],
+            refund: "If not achieved: 30% refund of months 4-6 fees + free improvement proposal report (worth ¥50,000)"
+          },
+          options: {
+            title: "Three options after 6 months",
+            options: [
+              "Annual contract (10% OFF)",
+              "Continue monthly contract",
+              "Cancel"
+            ]
+          }
+        },
+        refund_process: {
+          question: "Will I really get a refund?",
+          answer: "Yes. We make fair judgments based on data from third-party tools (Google Analytics, etc.).",
+          process: [
+            "Record baseline at contract time",
+            "Share progress monthly",
+            "Use only Google official tools",
+            "Implement refunds with fair criteria"
+          ]
+        },
+        guarantee_why: {
+          question: "Why can you guarantee results?",
+          answer: "Because the combination of Astro.js and CDN makes technical speed optimization certain.",
+          reasons: [
+            "Track record: Average 92 points achieved",
+            "Reliability of Jamstack technology",
+            "High-speed delivery by CDN",
+            "Optimized code generation"
+          ]
+        },
+        contract_term: {
+          question: "What happens after 6 months?",
+          answer: "You can freely choose from three options: annual contract (10% OFF), continue monthly contract, or cancel.",
+          benefits: [
+            "No 1-year lock-in",
+            "Flexible choices based on results",
+            "Significant risk reduction",
+            "Transparent contract terms"
+          ]
+        },
       },
       other_questions: {
         title: "Have any other questions?",
@@ -551,6 +681,10 @@ export const translations = {
     pricing: {
       title: "价格方案",
       subtitle: "简单透明的价格体系",
+      guarantee: {
+        title: "6个月成果保证",
+        subtitle: "未达成最多50%退款"
+      },
       basic: {
         name: "基础版",
         price: "¥3,500",
@@ -744,6 +878,67 @@ export const translations = {
           },
           support: "我们支持全球业务扩展。",
         },
+        guarantee_system: {
+          question: "请详细告诉我成果保证系统",
+          answer: "通过6个月的成果保证系统，我们在技术面和业务面两方面保证成果。",
+          technical_guarantee: {
+            title: "第1阶段：技术保证（3个月）",
+            features: [
+              "移动端：PageSpeed Insights 85分以上",
+              "桌面端：PageSpeed Insights 93分以上",
+              "Core Web Vitals所有指标'良好'评价"
+            ],
+            refund: "未达成时：3个月月费50%退款 + 额外1个月免费改善支持"
+          },
+          business_guarantee: {
+            title: "第2阶段：业务成果保证（6个月）",
+            features: [
+              "网站停留时间15%提升",
+              "跳出率10%改善",
+              "咨询数量20%增加",
+              "页面浏览量15%增加"
+            ],
+            refund: "未达成时：4-6个月月费30%退款 + 免费改善提案报告（价值5万日元）"
+          },
+          options: {
+            title: "6个月后的3个选择",
+            options: [
+              "年合同（10%OFF）",
+              "月合同继续",
+              "解约"
+            ]
+          }
+        },
+        refund_process: {
+          question: "真的会退款吗？",
+          answer: "是的。基于第三方工具（Google Analytics等）的数据，公正地判定。",
+          process: [
+            "合同时记录基线",
+            "每月分享进展",
+            "仅使用Google官方工具",
+            "公正的判定标准下实施退款"
+          ]
+        },
+        guarantee_why: {
+          question: "为什么能保证成果？",
+          answer: "因为Astro.js和CDN的组合，技术上高速化是确定的。",
+          reasons: [
+            "实绩：平均92分达成",
+            "Jamstack技术的可靠性",
+            "CDN带来的高速分发",
+            "优化的代码生成"
+          ]
+        },
+        contract_term: {
+          question: "6个月后会怎样？",
+          answer: "可以从年合同（10%OFF）、月合同继续、解约3个中自由选择。",
+          benefits: [
+            "无1年束缚",
+            "根据成果的灵活选择",
+            "大幅降低风险",
+            "透明度高的合同条件"
+          ]
+        },
       },
       other_questions: {
         title: "还有其他问题吗？",
@@ -793,6 +988,10 @@ export const translations = {
     pricing: {
       title: "Planes de Precios",
       subtitle: "Estructura de precios simple y transparente",
+      guarantee: {
+        title: "Garantía de Resultados de 6 Meses",
+        subtitle: "Hasta 50% de reembolso si no se cumplen objetivos"
+      },
       basic: {
         name: "Básico",
         price: "¥500",
@@ -1008,6 +1207,67 @@ export const translations = {
           },
           support: "Apoyamos la expansión de negocios globales.",
         },
+        guarantee_system: {
+          question: "Cuéntame más sobre el sistema de garantía de resultados",
+          answer: "Garantizamos resultados en aspectos técnicos y comerciales a través de un sistema de garantía de resultados de 6 meses.",
+          technical_guarantee: {
+            title: "Fase 1: Garantía Técnica (3 meses)",
+            features: [
+              "Móvil: PageSpeed Insights 85+ puntos",
+              "Escritorio: PageSpeed Insights 93+ puntos",
+              "Core Web Vitals todas las métricas 'Buenas'"
+            ],
+            refund: "Si no se logra: 50% de reembolso de 3 meses de tarifas + 1 mes adicional de soporte de mejora gratuito"
+          },
+          business_guarantee: {
+            title: "Fase 2: Garantía de Resultados Comerciales (6 meses)",
+            features: [
+              "15% de aumento en tiempo de permanencia del sitio",
+              "10% de mejora en tasa de rebote",
+              "20% de aumento en consultas",
+              "15% de aumento en vistas de página"
+            ],
+            refund: "Si no se logra: 30% de reembolso de tarifas de meses 4-6 + informe de propuesta de mejora gratuito (valor ¥50,000)"
+          },
+          options: {
+            title: "Tres opciones después de 6 meses",
+            options: [
+              "Contrato anual (10% OFF)",
+              "Continuar contrato mensual",
+              "Cancelar"
+            ]
+          }
+        },
+        refund_process: {
+          question: "¿Realmente obtendré un reembolso?",
+          answer: "Sí. Hacemos juicios justos basados en datos de herramientas de terceros (Google Analytics, etc.).",
+          process: [
+            "Registrar línea base al momento del contrato",
+            "Compartir progreso mensualmente",
+            "Usar solo herramientas oficiales de Google",
+            "Implementar reembolsos con criterios justos"
+          ]
+        },
+        guarantee_why: {
+          question: "¿Por qué pueden garantizar resultados?",
+          answer: "Porque la combinación de Astro.js y CDN hace que la optimización de velocidad técnica sea segura.",
+          reasons: [
+            "Récord: Promedio de 92 puntos logrado",
+            "Confiabilidad de la tecnología Jamstack",
+            "Entrega de alta velocidad por CDN",
+            "Generación de código optimizada"
+          ]
+        },
+        contract_term: {
+          question: "¿Qué pasa después de 6 meses?",
+          answer: "Puedes elegir libremente entre tres opciones: contrato anual (10% OFF), continuar contrato mensual, o cancelar.",
+          benefits: [
+            "Sin compromiso de 1 año",
+            "Elecciones flexibles basadas en resultados",
+            "Reducción significativa de riesgos",
+            "Términos de contrato transparentes"
+          ]
+        },
       },
       other_questions: {
         title: "¿Tienes alguna otra pregunta?",
@@ -1057,6 +1317,10 @@ export const translations = {
     pricing: {
       title: "BoltSite 요금제",
       subtitle: "BoltSite의 간단하고 투명한 요금 체계",
+      guarantee: {
+        title: "6개월 성과 보장",
+        subtitle: "미달성 시 최대 50% 환불"
+      },
       basic: {
         name: "베이직",
         price: "₩50,000",
@@ -1260,6 +1524,67 @@ export const translations = {
             switching: "전환: 우상단의 언어 전환 버튼",
           },
           support: "글로벌 비즈니스 확장을 지원합니다.",
+        },
+        guarantee_system: {
+          question: "성과 보장 시스템에 대해 자세히 알려주세요",
+          answer: "6개월의 성과 보장 시스템으로 기술면과 비즈니스면 양쪽에서 성과를 보장합니다.",
+          technical_guarantee: {
+            title: "제1단계: 기술 보장 (3개월)",
+            features: [
+              "모바일: PageSpeed Insights 85점 이상",
+              "데스크톱: PageSpeed Insights 93점 이상",
+              "Core Web Vitals 모든 지표 '양호' 평가"
+            ],
+            refund: "미달성 시: 3개월분 월 요금 50% 환불 + 추가 1개월 무료 개선 지원"
+          },
+          business_guarantee: {
+            title: "제2단계: 비즈니스 성과 보장 (6개월)",
+            features: [
+              "사이트 체류 시간 15% 향상",
+              "이탈률 10% 개선",
+              "문의 수 20% 증가",
+              "페이지뷰 15% 증가"
+            ],
+            refund: "미달성 시: 4-6개월차 월 요금 30% 환불 + 개선 제안 리포트(5만원 상당) 무료 제공"
+          },
+          options: {
+            title: "6개월 후의 3가지 선택",
+            options: [
+              "연간 계약 (10% OFF)",
+              "월간 계약 계속",
+              "해약"
+            ]
+          }
+        },
+        refund_process: {
+          question: "정말 환불되나요?",
+          answer: "네. 제3자 도구(Google Analytics 등)의 데이터를 바탕으로 공정하게 판정합니다.",
+          process: [
+            "계약 시 베이스라인 기록",
+            "월별로 진행 상황 공유",
+            "Google 공식 도구만 사용",
+            "공정한 판정 기준으로 환불 실시"
+          ]
+        },
+        guarantee_why: {
+          question: "왜 성과 보장이 가능한가요?",
+          answer: "Astro.js와 CDN의 조합으로 기술적으로 고속화가 확실하기 때문입니다.",
+          reasons: [
+            "실적: 평균 92점 달성",
+            "Jamstack 기술의 확실성",
+            "CDN에 의한 고속 배포",
+            "최적화된 코드 생성"
+          ]
+        },
+        contract_term: {
+          question: "6개월 후에는 어떻게 되나요?",
+          answer: "연간 계약(10% OFF), 월간 계약 계속, 해약 3가지에서 자유롭게 선택할 수 있습니다.",
+          benefits: [
+            "1년 묶임 없음",
+            "성과에 따른 유연한 선택",
+            "리스크의 대폭 삭감",
+            "투명성 높은 계약 조건"
+          ]
         },
       },
       other_questions: {

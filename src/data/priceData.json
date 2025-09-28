@@ -7,7 +7,10 @@
     "support": "メールサポート",
     "update": "月1回更新",
     "action": "プランを選択",
-    "link": "#contact"
+    "link": "#contact",
+    "guarantee": "6ヶ月成果保証",
+    "contractTerm": "6ヶ月評価期間制",
+    "refundPolicy": "未達成なら最大50%返金"
   },
   {
     "title": "スタンダード",
@@ -17,7 +20,10 @@
     "support": "メール・チャットサポート",
     "update": "月2回更新",
     "action": "プランを選択",
-    "link": "#contact"
+    "link": "#contact",
+    "guarantee": "6ヶ月成果保証",
+    "contractTerm": "6ヶ月評価期間制",
+    "refundPolicy": "未達成なら最大50%返金"
   },
   {
     "title": "プレミアム",
@@ -27,16 +33,22 @@
     "support": "電話・メールサポート",
     "update": "月4回更新",
     "action": "プランを選択",
-    "link": "#contact"
+    "link": "#contact",
+    "guarantee": "6ヶ月成果保証",
+    "contractTerm": "6ヶ月評価期間制",
+    "refundPolicy": "未達成なら最大50%返金"
   },
   {
     "title": "エンタープライズ",
     "description": "大規模企業向けのカスタムプラン",
-    "price": 50000,
+    "price": "個別見積",
     "devCount": "無制限",
     "support": "専任コンサルタント",
     "update": "無制限更新",
     "action": "お問い合わせ",
-    "link": "#contact"
+    "link": "#contact",
+    "guarantee": "6ヶ月成果保証",
+    "contractTerm": "6ヶ月評価期間制",
+    "refundPolicy": "未達成なら最大50%返金"
   }
 ]
